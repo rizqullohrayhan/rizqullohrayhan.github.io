@@ -5,6 +5,7 @@
     --bg-black-50:#e8dfec;
     --text-black-900:#302e4d;
     --text-black-700:#504e70;
+    --skin-color:#fa5b0f;
 }
 
 body {
@@ -661,6 +662,40 @@ h3.my-profession {
 }
 
 .portfolio .portfolio-item-inner .portfolio-img img {
+    width: 100%;
+    display: block;
+}
+
+/* certificate */
+.certificate .container {
+    padding-bottom: 40px;
+}
+
+.certificate .certificate-heading {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.certificate .certificate-heading h2 {
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
+.certificate .certificate-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+
+.certificate .certificate-item-inner {
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.certificate .certificate-item-inner .certificate-img img {
     width: 100%;
     display: block;
 }
