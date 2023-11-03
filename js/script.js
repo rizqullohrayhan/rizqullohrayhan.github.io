@@ -12,42 +12,76 @@ const nav = document.querySelector(".nav"),
     totalNavList = navList.length,
     allSection = document.querySelectorAll(".section"),
     totalSection = allSection.length;
-    for (let i = 0; i < totalNavList; i++) {
-        const a = navList[i].querySelector("a");
-        a.addEventListener("click", function () {
-            for(let i = 0; i<totalSection; i++){
-                allSection[i].classList.remove("back-section");
-            }
-            for (let j = 0; j < totalNavList; j++) {
-                if(navList[j].querySelector("a").classList.contains("active")){
-                    allSection[j].classList.add("back-section");
-                }
-                navList[j].querySelector("a").classList.remove("active");
-            }
-            this.classList.add("active");
-            showSection(this);
-            if(window.innerWidth < 1200){
-                asideSectionTogglerBtn();
-            }
-        })
-    }
-    function showSection(element) {
+
+for (let i = 0; i < totalNavList; i++) {
+    const a = navList[i].querySelector("a");
+    a.addEventListener("click", function () {
         for(let i = 0; i<totalSection; i++){
-            allSection[i].classList.remove("active");
+            allSection[i].classList.remove("back-section");
         }
-        const target = element.getAttribute("href").split("#")[1];
-        document.querySelector("#" + target).classList.add("active");
-    }
-    const navTogglerBtn = document.querySelector(".nav-toggler"),
-        aside = document.querySelector(".aside");
-        navTogglerBtn.addEventListener("click", () =>
-        {
-            asideSectionTogglerBtn();
-        })
-        function asideSectionTogglerBtn(){
-            aside.classList.toggle("open");
-            navTogglerBtn.classList.toggle("open");
-            for(let i=0; i<totalSection; i++){
-                allSection[i].classList.toggle("open");
+        for (let j = 0; j < totalNavList; j++) {
+            if(navList[j].querySelector("a").classList.contains("active")){
+                allSection[j].classList.add("back-section");
             }
+            navList[j].querySelector("a").classList.remove("active");
         }
+        this.classList.add("active");
+        showSection(this);
+        if(window.innerWidth < 1200){
+            asideSectionTogglerBtn();
+        }
+    })
+}
+
+function showSection(element) {
+    for(let i = 0; i<totalSection; i++){
+        allSection[i].classList.remove("active");
+    }
+    const target = element.getAttribute("href").split("#")[1];
+    document.querySelector("#" + target).classList.add("active");
+}
+
+const navTogglerBtn = document.querySelector(".nav-toggler"),
+    aside = document.querySelector(".aside");
+
+navTogglerBtn.addEventListener("click", () =>
+{
+    asideSectionTogglerBtn();
+})
+
+function asideSectionTogglerBtn(){
+    aside.classList.toggle("open");
+    navTogglerBtn.classList.toggle("open");
+    for(let i=0; i<totalSection; i++){
+        allSection[i].classList.toggle("open");
+    }
+}
+
+var tabs = document.querySelectorAll(".nav-link");
+
+// Menambahkan event listener untuk setiap tautan
+tabs.forEach(function(tab) {
+    tab.addEventListener("click", function(event) {
+        event.preventDefault(); // Mencegah tautan dari berpindah ke halaman lain
+    
+        tabs.forEach(function(tombol) {
+            tombol.classList.remove("active");
+        })
+
+        // Menghapus kelas "active" dan "show" dari semua div tab-pane
+        var tabPanel = document.querySelectorAll("[role='tabpanel']");
+        tabPanel.forEach(function(pane) {
+            pane.classList.remove("active");
+            console.log(pane + 'terhapus');
+        });
+    
+        // Mendapatkan id yang sesuai dari href tautan yang diklik
+        var targetId = tab.getAttribute("href").substring(1);
+        console.log(targetId);
+    
+        // Menambahkan kelas "active" dan "show" ke div dengan id yang sesuai
+        var targetPanel = document.getElementById(targetId);
+        targetPanel.classList.add("active");
+        tab.classList.add("active");
+    });
+});
