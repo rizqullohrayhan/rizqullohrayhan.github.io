@@ -741,17 +741,6 @@ h3.my-profession {
     font-weight: 400;
 }
 
-/* .block {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    padding: 20px; */
-    /* background-color: #eaeaea; */
-    /* border: 1px solid #333; */
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-} */
-
 .block {
     width: 100%;
     max-width: 100%;
@@ -867,15 +856,15 @@ h3.my-profession {
     overflow-x: hidden;
 }
 
-div[role=tabpanel]{
+div[role='tabpanel']{
     display: none;
 }
 
-div[role=tabpanel].active{
+div[role='tabpanel'].active{
     display: flex;
 }
 
-div[role=tabpanel]:not(.active) {
+div[role='tabpanel']:not(.active) {
     display: none;
 }
 

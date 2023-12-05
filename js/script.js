@@ -1,3 +1,15 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Mendapatkan nilai hash dari URL
+    var hashValue = window.location.hash;
+    if (hashValue) {
+        let cleanHashValue = hashValue.slice(1);
+        showSection(cleanHashValue);
+        document.querySelector("#sidebar-" + cleanHashValue).classList.add("active");
+    } else {
+        document.querySelector("#sidebar-home").classList.add("active");
+    }
+});
+
 // typing animation
 var typed = new Typed(".typing",{
     strings:["Software Developer","Back End Developer","Machine Learning Engineer"],
@@ -37,7 +49,8 @@ function showSection(element) {
     for(let i = 0; i<totalSection; i++){
         allSection[i].classList.remove("active");
     }
-    const target = element.getAttribute("href").split("#")[1];
+    const target = element instanceof Element ? element.getAttribute("href").split("#")[1] : element;
+    // console.log( element instanceof Element);
     document.querySelector("#" + target).classList.add("active");
 }
 
@@ -72,7 +85,6 @@ tabs.forEach(function(tab) {
         var tabPanel = document.querySelectorAll("[role='tabpanel']");
         tabPanel.forEach(function(pane) {
             pane.classList.remove("active");
-            console.log(pane + 'terhapus');
         });
     
         // Mendapatkan id yang sesuai dari href tautan yang diklik
@@ -85,3 +97,4 @@ tabs.forEach(function(tab) {
         tab.classList.add("active");
     });
 });
+
