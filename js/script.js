@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector("#sidebar-" + cleanHashValue).classList.add("active");
     } else {
         document.querySelector("#sidebar-home").classList.add("active");
+        document.querySelector("#home").classList.add("active");
     }
 });
 
