@@ -90,7 +90,6 @@ tabs.forEach(function(tab) {
     
         // Mendapatkan id yang sesuai dari href tautan yang diklik
         var targetId = tab.getAttribute("href").substring(1);
-        console.log(targetId);
     
         // Menambahkan kelas "active" dan "show" ke div dengan id yang sesuai
         var targetPanel = document.getElementById(targetId);
