@@ -666,6 +666,14 @@ h3.my-profession {
     display: block;
 }
 
+.portfolio .portfolio-item-inner .portfolio-title {
+    text-align: center; /* Agar teks berada di tengah */
+    font-size: 16px; /* Sesuaikan ukuran teks */
+    margin-top: 5px; /* Beri jarak antara gambar dan judul */
+    margin-bottom: 5px;
+    color: var(--text-color); /* Gunakan variabel warna teks atau ganti dengan warna spesifik */
+}
+
 /* certificate */
 .certificate .container {
     padding-bottom: 40px;
@@ -912,6 +920,7 @@ div[role='tabpanel']:not(.active) {
     .service .service-item{
         flex: 0 0 50%;
         max-width: 50%;
+        margin-bottom: 32px;
     }
 
     .home .home-info{
@@ -935,5 +944,6 @@ div[role='tabpanel']:not(.active) {
     .about .about-content .personal-info{
         flex: 0 0 100%;
         max-width: 100%;
+        margin-bottom: 32px;
     }
 }

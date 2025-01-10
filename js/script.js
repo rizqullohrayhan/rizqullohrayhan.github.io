@@ -98,3 +98,11 @@ tabs.forEach(function(tab) {
     });
 });
 
+function getAge() {
+    const d = new Date();
+    let year = d.getFullYear();
+    return year - 2003
+}
+
+const age = document.getElementById("age")
+age.innerHTML = getAge()
