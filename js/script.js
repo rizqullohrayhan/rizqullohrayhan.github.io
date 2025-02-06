@@ -106,3 +106,79 @@ function getAge() {
 
 const age = document.getElementById("age")
 age.innerHTML = getAge()
+
+document.addEventListener("DOMContentLoaded", function () {
+    const itemsPerPage = 6;
+    const prevPage = document.getElementById("prevPage");
+    const nextPage = document.getElementById("nextPage");
+    let currentPage = 1;
+    
+    const portfolioItems = [
+        { link: "https://manage-produk.vercel.app/", img: "images/porto/manage-produk.png", title: "Manajemen Produk (Django, PostgreSQL)" },
+        { link: "https://djcrm-smoky.vercel.app/", img: "images/porto/djcrm.png", title: "DjCRM (Django, PostgreSQL)" },
+        { link: "https://deploy-django-crm.vercel.app/", img: "images/porto/django_projectx.png", title: "Project X (Django, PostgreSQL)" },
+        { link: "https://portal.vokasi.uns.ac.id/", img: "images/porto/portal sv.png", title: "Portal SV UNS (HTML, CSS, JS)" },
+        { link: "https://vokasi.uns.ac.id/", img: "images/porto/vokasi.png", title: "Profile SV UNS (Laravel, MySQL)" },
+        { link: "https://yanma.vokasi.uns.ac.id/", img: "images/porto/yanma.png", title: "Pelayanan Mahasiswa (Laravel, MySQL)" },
+        { link: "https://simonsi.vokasi.uns.ac.id/", img: "images/porto/simonsi.png", title: "SIMONSI (Laravel, MySQL)" },
+        { link: "https://github.com/rizqullohrayhan/bukutamu", img: "images/porto/buku_tamu.png", title: "Buku Tamu (Laravel, MySQL)" },
+        { link: "https://bappeda.surakarta.go.id/", img: "images/porto/bappeda.png", title: "Bappeda Surakarta (Laravel, MySQL)" },
+        { link: "https://uns.id/GymThings", img: "images/porto/gymthings.png", title: "Gymthings (ML Tensorflow)" },
+        { link: "http://manajemenperpustakaan.azurewebsites.net/", img: "images/porto/perpustakaan.png", title: "Perpustakaan (Laravel, MySQL)" },
+        { link: "https://v3421083.mhs.d3tiuns.com/javatrain/", img: "images/porto/javatrain.png", title: "Javatrain (PHP Native, MySQL)" },
+        { link: "https://pkm.integrasi.uns.ac.id/", img: "images/porto/pkm.png", title: "PKM UNS (Laravel, MySQL)" }
+    ];
+
+    const totalPage = Math.ceil((portfolioItems.length + 1)/itemsPerPage);
+
+    function showHideNav() {
+        if (currentPage == 1) {
+            prevPage.style.display = "none";
+        } else {
+            prevPage.style.removeProperty("display");
+        }
+        if (currentPage == totalPage) {
+            nextPage.style.display = "none";
+        } else {
+            nextPage.style.removeProperty("display");
+        }
+    }
+
+    function renderPortfolio() {
+        const portfolioContainer = document.getElementById("portfolio-container");
+        portfolioContainer.innerHTML = "";
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        
+        portfolioItems.slice(start, end).forEach(item => {
+            const portfolioItem = `
+                <div class="portfolio-item padd-15">
+                    <div class="portfolio-item-inner shadow-dark">
+                        <a href="${item.link}" target="_blank" class="portfolio-img">
+                            <img src="${item.img}" alt="${item.title}">
+                        </a>
+                        <div class="portfolio-title">${item.title}</div>
+                    </div>
+                </div>`;
+            portfolioContainer.innerHTML += portfolioItem;
+        });
+        showHideNav()
+        document.getElementById("pageNumber").textContent = currentPage + '/' + totalPage;
+    }
+    
+    prevPage.addEventListener("click", function () {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPortfolio();
+        }
+    });
+    
+    nextPage.addEventListener("click", function () {
+        if (currentPage * itemsPerPage < portfolioItems.length) {
+            currentPage++;
+            renderPortfolio();
+        }
+    });
+    
+    renderPortfolio();
+});
