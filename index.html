@@ -59,7 +59,7 @@
                             <h3 class="hello">Hello, my name is <span class="name">Rizqulloh Rayhan Ferdiansyah</span>
                             </h3>
                             <h3 class="my-profession">I am a <span class="typing"> </span></h3>
-                            <p>Rizqulloh Rayhan Ferdiansyah (22 years old) is a fresh graduate in Informatics
+                            <p>Rizqulloh Rayhan Ferdiansyah (<span id="home-age">21</span> years old) is a fresh graduate in Informatics
                                 Engineering with practical experience in
                                 software development, gained through multiple internships. He is proficient in Laravel,
                                 PHP, JQuery, Bootstrap, SQL, Python,
@@ -99,14 +99,15 @@
                                         MySQL database management.</p>
                                 </div>
                             </div>
+                            <!-- Personal Info -->
                             <div class="row">
                                 <div class="personal-info padd-15">
                                     <div class="row">
                                         <div class="info-item padd-15">
-                                            <p>Age : <span id="age"> </span></p>
+                                            <p>Age : <span id="info-age"> </span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Website : <span>rizqullohrayhan.github.io</span></p>
+                                            <p>Website : <span id="info-domain">rizqullohrayhan.github.io</span></p>
                                         </div>
                                         <div class="info-item padd-15">
                                             <p>Email : <span>rizqullohferdiansyah41@gmail.com</span></p>
@@ -145,6 +146,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Experiences -->
                             <div class="row">
                                 <div class="education padd-15">
                                     <h3 class="title">Educations</h3>
@@ -186,6 +188,14 @@
                                         <div class="timeline-box padd-15">
                                             <div class="timeline shadow-dark">
                                                 <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> Februari 2025 - now
+                                                    </h3>
+                                                    <h4 class="timeline-title">PT Toya Indo Manunggal</h4>
+                                                    <p class="timeline-text">Full Stack Developer</p>
+                                                </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
@@ -599,7 +609,7 @@
                         <div class="contact-info-item padd-15">
                             <div class="icon"><i class="fa fa-globe-europe"></i></div>
                             <h4>Website</h4>
-                            <a href="https://rizqullohrayhan.github.io/">rizqullohrayhan.github.io</a>
+                            <a href="https://rizqullohrayhan.github.io/" id="contact-domain">rizqullohrayhan.github.io</a>
                         </div>
                         <div class="contact-info-item padd-15">
                             <div class="icon"><i class="fa-brands fa-github fa-xl" style="color: var(--skin-color);"></i></div>

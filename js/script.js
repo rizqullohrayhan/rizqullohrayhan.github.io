@@ -104,8 +104,12 @@ function getAge() {
     return year - 2003
 }
 
-const age = document.getElementById("age")
-age.innerHTML = getAge()
+document.getElementById("info-age").innerHTML = getAge();
+document.getElementById("home-age").innerHTML = getAge();
+const currentURL = window.location.hostname;
+document.getElementById("info-domain").innerHTML = currentURL;
+document.getElementById("contact-domain").innerHTML = currentURL;
+document.getElementById("contact-domain").href = window.location.origin;
 
 document.addEventListener("DOMContentLoaded", function () {
     const itemsPerPage = 6;
