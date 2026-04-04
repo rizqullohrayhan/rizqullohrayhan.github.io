@@ -118,18 +118,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 1;
     
     const portfolioItems = [
-        { link: "https://manage-produk.vercel.app/", img: "images/porto/manage-produk.png", title: "Manajemen Produk (Django, PostgreSQL)" },
-        { link: "https://djcrm-smoky.vercel.app/", img: "images/porto/djcrm.png", title: "DjCRM (Django, PostgreSQL)" },
-        { link: "https://deploy-django-crm.vercel.app/", img: "images/porto/django_projectx.png", title: "Project X (Django, PostgreSQL)" },
+        { link: "https://landing-npa.rizqullohrf.my.id/", img: "images/porto/landing-npa.png", title: "Landing Page NPA (PHP)" },
+        { link: "https://manajemen-produk.rizqullohrf.my.id/", img: "images/porto/manage-produk.png", title: "Manajemen Produk (Django, PostgreSQL)" },
+        { link: "https://djcrm.rizqullohrf.my.id/", img: "images/porto/djcrm.png", title: "DjCRM (Django, PostgreSQL)" },
+        { link: "https://crm.rizqullohrf.my.id/", img: "images/porto/django_projectx.png", title: "Project X (Django, PostgreSQL)" },
         { link: "https://portal.vokasi.uns.ac.id/", img: "images/porto/portal sv.png", title: "Portal SV UNS (HTML, CSS, JS)" },
         { link: "https://vokasi.uns.ac.id/", img: "images/porto/vokasi.png", title: "Profile SV UNS (Laravel, MySQL)" },
         { link: "https://yanma.vokasi.uns.ac.id/", img: "images/porto/yanma.png", title: "Pelayanan Mahasiswa (Laravel, MySQL)" },
         { link: "https://simonsi.vokasi.uns.ac.id/", img: "images/porto/simonsi.png", title: "SIMONSI (Laravel, MySQL)" },
-        { link: "https://github.com/rizqullohrayhan/bukutamu", img: "images/porto/buku_tamu.png", title: "Buku Tamu (Laravel, MySQL)" },
+        { link: "https://guestbook.rizqullohrf.my.id/", img: "images/porto/buku_tamu.png", title: "Buku Tamu (Laravel, MySQL)" },
         { link: "https://bappeda.surakarta.go.id/", img: "images/porto/bappeda.png", title: "Bappeda Surakarta (Laravel, MySQL)" },
         { link: "https://uns.id/GymThings", img: "images/porto/gymthings.png", title: "Gymthings (ML Tensorflow)" },
-        { link: "http://manajemenperpustakaan.azurewebsites.net/", img: "images/porto/perpustakaan.png", title: "Perpustakaan (Laravel, MySQL)" },
-        { link: "https://v3421083.mhs.d3tiuns.com/javatrain/", img: "images/porto/javatrain.png", title: "Javatrain (PHP Native, MySQL)" },
+        { link: "http://library.rizqullohrf.my.id", img: "images/porto/perpustakaan.png", title: "Perpustakaan (Laravel, MySQL)" },
+        { link: "https://javatrain.rizqullohrf.my.id/", img: "images/porto/javatrain.png", title: "Javatrain (PHP Native, MySQL)" },
         { link: "https://pkm.integrasi.uns.ac.id/", img: "images/porto/pkm.png", title: "PKM UNS (Laravel, MySQL)" }
     ];
 

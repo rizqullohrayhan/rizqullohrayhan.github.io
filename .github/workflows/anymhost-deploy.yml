@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.FTP_ANYMHOST_USER }}
         password: ${{ secrets.FTP_ANYMHOST_PASS }}
         protocol: ftp
-        port: ${{ secrets.FTP_ANYMHOST_PORT }}
+        port: 21
         local-dir: ./
         server-dir: ./
         timeout: 600000
