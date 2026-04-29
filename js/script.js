@@ -118,6 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 1;
     
     const portfolioItems = [
+        { link: "https://graha.rizqullohrf.my.id/v2/dashboard", img: "images/porto/graha-v2.png", title: "GRAHA V2 (Laravel, MySQL)" },
+        { link: "https://graha.rizqullohrf.my.id/", img: "images/porto/graha.png", title: "GRAHA (Laravel, MySQL)" },
+        { link: "https://hris.rizqullohrf.my.id/", img: "images/porto/hris.png", title: "HRIS (Laravel, MySQL)" },
         { link: "https://landing-npa.rizqullohrf.my.id/", img: "images/porto/landing-npa.png", title: "Landing Page NPA (PHP)" },
         { link: "https://manajemen-produk.rizqullohrf.my.id/", img: "images/porto/manage-produk.png", title: "Manajemen Produk (Django, PostgreSQL)" },
         { link: "https://djcrm.rizqullohrf.my.id/", img: "images/porto/djcrm.png", title: "DjCRM (Django, PostgreSQL)" },
